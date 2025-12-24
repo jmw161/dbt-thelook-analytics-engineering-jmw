@@ -10,7 +10,7 @@ This repo is a portfolio project to practice analytics engineering workflows usi
 - Basic dbt tests
 
 ## Dataset
--source: `bigquery-public-data.thelook_ecommerce`
+- source: `bigquery-public-data.thelook_ecommerce`
 
 ## Current Status:
 - Created a dedicated GCP project (no-org so I could create service account keys) for learning and dbt integration
