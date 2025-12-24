@@ -5,10 +5,6 @@ This repo is a portfolio project to practice analytics engineering workflows usi
 - Google Big Query
 - dbt
 
-## What's coming
-- Source definitions/yml file
-- Basic dbt tests
-
 ## Dataset
 - source: `bigquery-public-data.thelook_ecommerce`
 
