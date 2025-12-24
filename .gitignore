@@ -205,3 +205,15 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+
+# dbt and BQ safety
+dbt_packages/
+target/
+logs
+
+# macOS
+.DS_Store
+
+# don't commit service account keys
+*.json
