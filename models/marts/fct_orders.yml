@@ -1,0 +1,44 @@
+version: 2
+
+models:
+  - name: fct_orders
+    description: "Created one row per order_id. Aggregated order-level metrics"
+    columns:
+      - name: order_id
+        description: "Primary key in orders; foreign key in order_items; grain key (primary key) for fct_orders. "
+        tests:
+          - not_null
+          - unique
+
+      - name: user_id
+        description: "Customer identifier"
+
+      - name: order_status
+        description: "Order status (Shipped, Complete, Cancelled, etc.)"
+
+      - name: gender
+        description: "Customer gender"
+
+      - name: created_at
+        description: "Timestamp when order was created."
+
+      - name: shipped_at
+        description: "Timestamp when order was shipped (null if not shipped)."
+
+      - name: delivered_at
+        description: "Timestamp when order was delivered (null if not delivered)."
+
+      - name: returned_at
+        description: "Timestamp when order was returned (null if not returned)."
+
+      - name: num_of_item
+        description: "Item count provided by source orders table."
+
+      - name: row_count
+        description: "Number of order_item rows"
+
+      - name: distinct_products
+        description: "Count of distinct product_id values for each order_id"
+
+      - name: gross_sales
+        description: "Sum of sale_price across order_id"
